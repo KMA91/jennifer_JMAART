@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+}
+
+.jumbo {
+  height: 650px;
+  background: linear-gradient(90deg, rgba(255,248,235,1) 0%, rgba(255,181,95,1) 50%, rgba(255,255,255,1) 100%);
+}
+
+.jumboContainer {
+  text-align: center;
+  padding: 40px 0px;
+  max-width: 100%;
+}
+
+.jumboContainer .signature, .jumboContainer .selfie {
+  margin: 0 auto 25px;
+  text-align: center;
+  width: 15%;
+}
+
+@media (max-width: 414px) {
+  .jumboContainer .signature, .jumboContainer .selfie {
+    width: 70%;
+  }
+}
+
+@media (min-width: 415px) and (max-width: 1024px) {
+  .jumboContainer .signature, .jumboContainer .selfie {
+    width: 30%;
+  }
+}
+
+.jmaCircle img {
+  border-radius: 50%;
+  border: 7px dotted white;
+}
+
+.socialMediaContainer {
+  display: block;
+}
+.socialMediaContent {
+  display: inline;
+  background: white;
+  padding: 32px;
+  border-radius: 15px;
+}
+
+.socialMediaContainer a img {
+  max-height: 70px;
+  padding: 15px;
+}
+
+.instagram:hover, .email:hover {
+  -webkit-animation: bounce 1s infinite; /* Safari 4+ */
+  -moz-animation: bounce 1s infinite; /* Fx 5+ */
+  -o-animation: bounce 1s infinite; /* Opera 12+ */
+  animation: bounce 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-10px);}
+    60% {-webkit-transform: translateY(-10px);}
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-10px);}
+}
+
+/* IMAGE SECTION */
+
+.gal {
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+	}
+
+.gal img {
+  width: 100%; padding: 7px 0;
+}
+
+@media (max-width: 500px) {
+  .gal {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+	}
+}
+
+/* FOOTER */
+
+footer {
+  padding: 100px 0;
+  background: linear-gradient(90deg, rgba(255,248,235,1) 0%, rgba(255,181,95,1) 50%, rgba(255,255,255,1) 100%);
+}
