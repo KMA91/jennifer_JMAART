@@ -10,65 +10,79 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/custom.css">
-    <title>JMA</title>
+    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+    <title>Jennifer Ma.</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+    <style type="text/css">
+        a.fancybox img {
+            border: none;
+            box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        }
+    </style>
   </head>
+
+  <!-- FADE THE TOP? -->
+
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+  <style type="text/css">
+      a.fancybox img {
+          border: none;
+      }
+  </style>
+
   <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="top">
       <div class="row">
-        <div class="jumbo col-xs-12">
-          <div class="jumboContainer">
-            <img src="images/signature.png" alt="Jennifer Ma's Signature" class="img-responsive signature">
-            <div class="jmaCircle">
-              <img src="images/selfie.jpg" alt="Jennifer Ma's Selfie" class="img-responsive selfie">
+        <div class="jumboContainer col-xs-12">
+          <div class="jumbo">
+            <img src="images/signature.png" alt="Jennifer Ma's Signature" class="img-responsive jumbo--signature">
+            <div class="jumbo--circle">
+              <img src="images/selfie.jpg" alt="Jennifer Ma's Selfie" class="img-responsive jumbo--selfie">
             </div>
-            <div class="socialMediaContainer">
-              <div class="socialMediaContent">
-                <a href="#"><img src="images/instagram.png" alt="instagram" class="instagram"></a>
-                <a href="#"><img src="images/emailWhiteInner.png" alt="email" class="email"></a>
-              </div>
+            <div class="jumbo--text">
+              <p>Jennifer Ma.</p>
+              <p>JMA ART.</p>
+              <p>Los Angeles, CA.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid" id="middle">
 
+      <div class="galleryContainer">
+        <h1>JMA Art.</h1>
+        <div class="col-md-12">
+          <div class="gallery">
 
-    <h1>JMA Art.</h1>
-      <div class="col-md-12">
-        <div class="row">
+            <!-- <img class="fancybox" src="small-image.jpg" data-big="big-image.jpg" /> -->
+            <img src="images/live/1.jpg" class="gallery--image">
+            <img src="images/live/3.jpg" class="gallery--image">
+            <img src="images/live/4.jpg" class="gallery--image">
+            <img src="images/live/5.jpg" class="gallery--image">
+            <img src="images/live/6.jpg" class="gallery--image">
+            <img src="images/live/7.jpg" class="gallery--image">
+            <img src="images/live/8.jpg" class="gallery--image">
+            <img src="images/live/9.jpg" class="gallery--image">
+            <img src="images/live/10.jpg" class="gallery--image">
+            <img src="images/live/11.jpg" class="gallery--image">
+            <img src="images/live/12.jpg" class="gallery--image">
+            <img src="images/live/13.jpg" class="gallery--image">
+            <img src="images/live/14.jpg" class="gallery--image">
+            <img src="images/live/15.jpg" class="gallery--image">
+            <img src="images/live/16.jpg" class="gallery--image">
+            <img src="images/live/17.jpg" class="gallery--image">
+            <img src="images/live/18.jpg" class="gallery--image">
 
-        	<div class="gal">
-
-            <img src="images/artimg.jpg" alt="">
-            <img src="images/artimg2.jpg" alt="">
-            <img src="images/artimg3.jpg" alt="">
-            <img src="images/artimg4.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt=""><img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-            <img src="https://preview.ibb.co/mysOxk/3.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/i0PmHk/1.jpg" alt="">
-            <img src="https://preview.ibb.co/mWpE3Q/2.jpg" alt="">
-        	</div>
-
+          </div>
         </div>
       </div>
+
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
           <div class="text-center">
             <a href="#">Contact</a>
@@ -84,6 +98,17 @@
           </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+    <script type="text/javascript">
+
+    // Allow usage of
+
+        $.noConflict();
+
+    </script>
 
   </body>
 </html>
