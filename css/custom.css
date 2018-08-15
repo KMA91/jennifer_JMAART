@@ -121,6 +121,7 @@ body {
     -webkit-column-gap: 2px; /* Chrome, Safari, Opera */
     -moz-column-gap: 2px; /* Firefox */
     column-gap: 2px;
+    display: inline-block !important;
 	}
 
 .gallery img {
