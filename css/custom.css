@@ -114,15 +114,38 @@ body {
 
 /* IMAGE SECTION */
 
-.gallery {
-	-webkit-column-count: 6; /* Chrome, Safari, Opera */
-    -moz-column-count: 6; /* Firefox */
-    column-count: 6;
+.abc {
+	-webkit-column-count: 7; /* Chrome, Safari, Opera */
+    -moz-column-count: 7; /* Firefox */
+    column-count: 7;
     -webkit-column-gap: 2px; /* Chrome, Safari, Opera */
     -moz-column-gap: 2px; /* Firefox */
     column-gap: 2px;
-    display: inline-block !important;
-	}
+    /* display: inline-block !important; */
+}
+
+
+@media (min-width: 415px) and (max-width: 1028px){
+  .abc {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 2px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 2px; /* Firefox */
+    column-gap: 2px;
+  }
+}
+
+@media (max-width: 414px){
+  .abc {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    -webkit-column-gap: 2px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 2px; /* Firefox */
+    column-gap: 2px;
+  }
+}
 
 .gallery img {
   max-width: 100%;
@@ -142,6 +165,10 @@ body {
   filter:brightness(1) !important;
 }
 
+.lightgallery:not(:first-child) img {
+  display: none;
+}
+
 #middle {
   transition: background 1s;
   -webkit-transition: background 1s;
@@ -150,7 +177,7 @@ body {
 }
 
 .gallery {
-  padding: 0px 10px;
+  padding: 0px 1px;
   /* border: 2px solid #fff6ec; */
   border-radius: 7px;
 }
