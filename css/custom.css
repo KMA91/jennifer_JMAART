@@ -57,10 +57,9 @@ body {
 }
 
 .jumbo--text {
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Playfair Display', serif;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  /* font-weight: 900; */
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-size: 2em;
   font-weight: bold;
@@ -115,12 +114,12 @@ body {
 /* IMAGE SECTION */
 
 .abc {
-	-webkit-column-count: 7; /* Chrome, Safari, Opera */
-    -moz-column-count: 7; /* Firefox */
-    column-count: 7;
-    -webkit-column-gap: 2px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 2px; /* Firefox */
-    column-gap: 2px;
+	-webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+    -webkit-column-gap: 10px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 10px; /* Firefox */
+    column-gap: 10px;
     /* display: inline-block !important; */
 }
 
@@ -149,7 +148,7 @@ body {
 
 .gallery img {
   max-width: 100%;
-  padding: 2px 0;
+  padding: 8px 0;
 }
 
 .gallery--image {
