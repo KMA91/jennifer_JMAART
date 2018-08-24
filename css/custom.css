@@ -11,6 +11,7 @@
   font-size: 85px;
   margin-left: 50px;
   color: red;
+  display: none;
 }
 
 .fadeUp {
@@ -22,8 +23,8 @@
   animation-timing-function: linear;
   animation-iteration-count: 1;
   -webkit-animation-iteration-count: 1;
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
 }
 
 #aboutme {
@@ -33,33 +34,42 @@
   padding: 0 20%;
   margin: 0 auto;
   text-align: center;
+  top: 17%;
+  position: fixed;
 }
+
+.sticky-footer {
+   width:100%;
+   position:fixed;
+   bottom:0px;
+}
+
+/*
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+} */
 
 .navigation {
   position: absolute;
 }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes moveUp {
   0% {
     -webkit-transform: translateY(0);
   }
   100% {
     -webkit-transform: translateY(-400px);
-    opacity: 0;
   }
 }
-@keyframes bounce {
+@keyframes moveUp {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(-400px);
-    opacity: 0;
   }
-}
-.bounce {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
 }
 
 
@@ -98,6 +108,9 @@
   .jumbo--signature, .jumbo--selfie {
     width: 70%;
   }
+  #aboutme{
+    top: 0;
+  }
 }
 
 @media (min-width: 415px) and (max-width: 1024px) {
@@ -113,8 +126,6 @@
   letter-spacing: 2px;
   font-size: 2em;
   font-weight: bold;
-  background: white;
-  border-radius: 10px;
   display: inline-block;
   color: #a2a2a2;
 }
@@ -262,5 +273,46 @@
 /* FOOTER */
 
 footer {
-  padding: 50px 0;
+  font-size: 17px;
+  padding: 45px 0;
+  width: 100%;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  /* -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-name: bounce;
+  animation-name: bounce; */
 }
+
+/* @-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  25% {
+    -webkit-transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */

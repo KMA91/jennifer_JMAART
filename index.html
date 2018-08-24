@@ -22,7 +22,7 @@
     <title>Jennifer Ma.</title>
   </head>
   <body>
-      <div class="container-fluid">
+      <div class="container-fluid" id="top">
           <div class="row">
               <div style="padding: 10px 0 5px;">
                   <div class="jumboContainer">
@@ -218,22 +218,34 @@
 
       </div>
     </div>
+
     <div class="container-fluid" id="aboutme">
-      <h1>Hello</h1>
+        <div>
+          <div class="jumboContainer">
+            <div class="jumbo">
+              <img src="img/signature.png" alt="Jennifer Ma's Signature" class="img-responsive jumbo--signature" style="margin: 0 auto;">
+              <div class="jumbo--text" style="font-size: 20px; letter-spacing: 1px; line-height: 0.95">
+                <p>jennifer ma.</p>
+                <p>visual artist.</p>
+                <p>Los Angeles, CA.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       <div>
-        <h2>"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</h2>
+        <p style="font-size: 20px; letter-spacing: 1px;">"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</p>
         <button class="btn">Gallery</button>
       </div>
     </div>
+
     <footer id="footer">
-      <div class="navigation">
+      <div class="navigation centered">
         <h1 id="ABOUTME">ABOUT ME</h1>
         <!-- <h1 id="GALL">Gallery</h1> -->
       </div>
         <div class="container">
           <div class="text-center">
-            <a href="#">Contact</a>
-            <a href="mailto:jma89art@gmail.com" title="E-mail me!">E-mail</a>
+            <a href="mailto:jma89art@gmail.com" title="E-mail me!">jma89art@gmail.com</a><br>
             <a href="https://www.instagram.com/artist_j.ma/" title="Follow me on Instagram!" target="_blank">Instagram</a>
           </div>
           <div class="text-center">
@@ -252,24 +264,28 @@
           $("#lightgallery").lightGallery();
           $('.gallery--group').lightGallery({
               selector: '.lightgallery'
-          });
-
-    // Go ABOUT ME => GALLERY
-          $('.btn').click(function(){
-            $("#aboutme").fadeOut(2500);
-            $("#middle").fadeIn(2500);
-          })
+          });;
         })
 
-    // GO GALLERY => ABOUT ME
         window.onscroll = function(ev) {
-          $(document).ready(function() {
+          // CHANGE FROM GALLERY => ABOUT ME
+          $('.btn').click(function(){
+            document.body.style.overflow = 'visible';
+            $("#ABOUTME").css("display", "none").removeClass('fadeUp');
+            $("#aboutme").fadeOut(1000);
+            $("#top").fadeIn(1500);
+            $("#middle").fadeIn(1500);
+            $("#footer").removeClass('sticky-footer')
+          })
+          // CHANGE ABOUT ME => GALLERY
             if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-              $("#middle").fadeOut(2500);
-              $("#aboutme").fadeIn(2500)
-              $("#ABOUTME").addClass('fadeUp');
-              }
-          });
+              document.body.style.overflow = 'hidden';
+              $("#middle").fadeOut(500);
+              $("#top").fadeOut(500);
+              $("#aboutme").fadeIn(1000);
+              $("#footer").addClass('sticky-footer')
+              $("#ABOUTME").css("display", "block").addClass('fadeUp').fadeOut(2000);
+            }
         }
     </script>
 
