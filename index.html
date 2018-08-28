@@ -5,20 +5,13 @@
     <meta name="author" content="Kevin Ma / kevin@kevin-ma.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-    <!-- <script type="text/javascript" src="js/lightgallery.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.css" />
+    <link rel="stylesheet" href="css/custom.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.css" />
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <script type="text/javascript" src="js/lg-thumbnail.min.js"></script>
-
     <title>Jennifer Ma.</title>
   </head>
   <body>
@@ -32,15 +25,20 @@
                             <p>jennifer ma.</p>
                             <p>visual artist.</p>
                             <p>Los Angeles, CA.</p>
+                            <button type="button" class="btn button" onclick="galleryToAboutMe()">About Me</button>
+                            <!-- <p class="button">Gallery</p> -->
                         </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-
-<!-- inner = thumbnail -->
-
+    <!-- GALLERY -->
+    <!-- Each gallery group will
+    be grouped together when
+    users click on images.
+    Anchor Image = Front img
+    Img Image = Other img -->
     <div class="container-fluid" id="middle">
       <div class="row gallery">
         <div class="gallery--group">
@@ -232,19 +230,19 @@
             </div>
           </div>
         </div>
-      <div>
-        <p style="font-size: 20px; letter-spacing: 1px;">"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</p>
-        <button class="btn">Gallery</button>
+      <div class="quote">
+        <p class="quote--text" style="font-size: 20px; letter-spacing: 1px;">"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</p>
+        <button class="btn quote--button button" onclick="aboutMeToGallery()">Gallery</button>
       </div>
     </div>
 
     <footer id="footer">
       <div class="navigation centered">
         <h1 id="ABOUTME">ABOUT ME</h1>
-        <!-- <h1 id="GALL">Gallery</h1> -->
       </div>
         <div class="container">
           <div class="text-center">
+            <!-- <button type="button" class="btn button" onclick="galleryToAboutMe()">About Me</button> -->
             <a href="mailto:jma89art@gmail.com" title="E-mail me!">jma89art@gmail.com</a><br>
             <a href="https://www.instagram.com/artist_j.ma/" title="Follow me on Instagram!" target="_blank">Instagram</a>
           </div>
@@ -257,37 +255,6 @@
         </div>
     </footer>
 
-
-    <script type="text/javascript">
-    // LightGallery Initiation
-        $(document).ready(function() {
-          $("#lightgallery").lightGallery();
-          $('.gallery--group').lightGallery({
-              selector: '.lightgallery'
-          });;
-        })
-
-        window.onscroll = function(ev) {
-          // CHANGE FROM GALLERY => ABOUT ME
-          $('.btn').click(function(){
-            document.body.style.overflow = 'visible';
-            $("#ABOUTME").css("display", "none").removeClass('fadeUp');
-            $("#aboutme").fadeOut(1000);
-            $("#top").fadeIn(1500);
-            $("#middle").fadeIn(1500);
-            $("#footer").removeClass('sticky-footer')
-          })
-          // CHANGE ABOUT ME => GALLERY
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-              document.body.style.overflow = 'hidden';
-              $("#middle").fadeOut(500);
-              $("#top").fadeOut(500);
-              $("#aboutme").fadeIn(1000);
-              $("#footer").addClass('sticky-footer')
-              $("#ABOUTME").css("display", "block").addClass('fadeUp').fadeOut(2000);
-            }
-        }
-    </script>
-
+    <script type="text/javascript" src="js/fadePages.js"></script>
   </body>
 </html>
