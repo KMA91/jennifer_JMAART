@@ -15,7 +15,9 @@
     <title>Jennifer Ma.</title>
   </head>
   <body>
-      <div class="container-fluid" id="top">
+
+      <!-- JUMBO -->
+      <header class="container-fluid" id="top">
           <div class="row">
               <div style="padding: 10px 0 5px;">
                   <div class="jumboContainer">
@@ -26,19 +28,21 @@
                             <p>visual artist.</p>
                             <p>Los Angeles, CA.</p>
                             <button type="button" class="btn button" onclick="galleryToAboutMe()">About Me</button>
-                            <!-- <p class="button">Gallery</p> -->
                         </div>
                       </div>
                   </div>
               </div>
           </div>
-      </div>
+      </header>
+
     <!-- GALLERY -->
     <!-- Each gallery group will
     be grouped together when
     users click on images.
     Anchor Image = Front img
     Img Image = Other img -->
+
+    <!--  -->
     <div class="container-fluid" id="middle">
       <div class="row gallery">
         <div class="gallery--group">
@@ -131,11 +135,11 @@
           </a>
         </div>
         <div class="gallery--group">
-          <a href="https://s3-us-west-1.amazonaws.com/jma-art/medium/alien1.jpg" class="lightgallery">
-            <img src="https://s3-us-west-1.amazonaws.com/jma-art/thumbnails/alien1.jpg">
-          </a>
           <a href="https://s3-us-west-1.amazonaws.com/jma-art/medium/alien2.jpg" class="lightgallery">
             <img src="https://s3-us-west-1.amazonaws.com/jma-art/thumbnails/alien2.jpg">
+          </a>
+          <a href="https://s3-us-west-1.amazonaws.com/jma-art/medium/alien1.jpg" class="lightgallery">
+            <img src="https://s3-us-west-1.amazonaws.com/jma-art/thumbnails/alien1.jpg">
           </a>
         </div>
 
@@ -217,44 +221,46 @@
       </div>
     </div>
 
+    <!-- ABOUT ME -->
+    <!-- Includes:
+    1) Jumbotron <header>
+    2) Quote
+    3) Back to Gallery Button -->
+
     <div class="container-fluid" id="aboutme">
-        <div>
-          <div class="jumboContainer">
-            <div class="jumbo">
-              <img src="img/signature.png" alt="Jennifer Ma's Signature" class="img-responsive jumbo--signature" style="margin: 0 auto;">
-              <div class="jumbo--text" style="font-size: 20px; letter-spacing: 1px; line-height: 0.95">
-                <p>jennifer ma.</p>
-                <p>visual artist.</p>
-                <p>Los Angeles, CA.</p>
-              </div>
-            </div>
+      <div class="jumboContainer">
+        <div class="jumbo">
+          <img src="img/signature.png" alt="Jennifer Ma's Signature" class="img-responsive jumbo--signature" style="margin: 0 auto;">
+          <div class="jumbo--text" style="font-size: 20px; letter-spacing: 1px; line-height: 0.95">
+            <p>jennifer ma.</p>
+            <p>visual artist.</p>
+            <p>Los Angeles, CA.</p>
           </div>
         </div>
+      </div>
       <div class="quote">
-        <p class="quote--text" style="font-size: 20px; letter-spacing: 1px;">"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</p>
+        <p class="quote--text">"My work represents the world I dream of. Eclectic of my interests and curiosities. Influenced by my perception of the world, environments, things, and beings in it known and unknown to me."</p>
         <button class="btn quote--button button" onclick="aboutMeToGallery()">Gallery</button>
       </div>
     </div>
 
-    <footer id="footer">
+    <!-- FOOTER -->
+    <footer class="footer">
       <div class="navigation centered">
         <h1 id="ABOUTME">ABOUT ME</h1>
       </div>
-        <div class="container">
-          <div class="text-center">
-            <!-- <button type="button" class="btn button" onclick="galleryToAboutMe()">About Me</button> -->
-            <a href="mailto:jma89art@gmail.com" title="E-mail me!">jma89art@gmail.com</a><br>
-            <a href="https://www.instagram.com/artist_j.ma/" title="Follow me on Instagram!" target="_blank">Instagram</a>
-          </div>
-          <div class="text-center">
-            	Jennifer Ma - JMA Art &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
-          </div>
-          <div class="text-center">
-            Website built by <a href="#">Kevin Ma</a>
-          </div>
+      <button class="btn footer--aboutme button" onclick="galleryToAboutMe()">ABOUT ME</button>
+      <div class="footer--bottom container">
+        <div class="footer--content text-center">
+          <a href="mailto:jma89art@gmail.com" title="E-mail me!">jma89art@gmail.com</a><br>
+          <a href="https://www.instagram.com/artist_j.ma/" title="Follow me on Instagram!" target="_blank">Instagram</a>
+          <p>Jennifer Ma - JMA Art &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+          <p>Website built by <a href="#">Kevin Ma</a></p>
         </div>
+      </div>
     </footer>
 
-    <script type="text/javascript" src="js/fadePages.js"></script>
+    <!-- CUSTOM LIGHT GALLERY SCRIPT + DEVICE CHECK  -->
+    <script type="text/javascript" src="js/customgallery.js"></script>
   </body>
 </html>

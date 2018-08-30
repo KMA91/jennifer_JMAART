@@ -3,10 +3,11 @@
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-#GALL{
-  position: absolute;
+body {
+  min-height: 750px;
 }
 
+/* ABOUT ME - FADE UP */
 #ABOUTME {
   font-size: 85px;
   margin-left: 50px;
@@ -29,37 +30,7 @@
   margin: 0;
 }
 
-@media (max-width: 414px){
-  .jumbo--text button {
-    display: block;
-  }
-  .jumbo--text p:last-child {
-    display: none;
-  }
-}
-
-@media (min-width: 415px){
-  .jumbo--text button {
-    display: none;
-  }
-  .jumbo--text p:last-child {
-    display: inline-block;
-  }
-}
-
-.fadeUp {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-name: moveUp;
-  animation-name: moveUp;
-}
-
+/* JUMBOTRON */
 #aboutme {
   display: none;
   min-height: 100%;
@@ -68,47 +39,11 @@
   margin: 0 auto;
   text-align: center;
   top: 17%;
-  position: fixed;
+  /* position: fixed; */
 }
-
-.sticky-footer {
-   width:100%;
-   position:fixed;
-   bottom:0px;
-}
-
-/*
-.centered {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-} */
 
 .navigation {
   position: absolute;
-}
-
-@-webkit-keyframes moveUp {
-  0% {
-    -webkit-transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-400px);
-  }
-}
-@keyframes moveUp {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-400px);
-  }
-}
-
-
-.jumbo {
-  /* height: 95vh; */
-  /* background: linear-gradient(90deg, rgba(255,248,235,1) 0%, rgba(255,181,95,1) 50%, rgba(255,255,255,1) 100%); */
 }
 
 .jumbo {
@@ -124,38 +59,7 @@
   margin: 10px auto 18px;
 }
 
-.jumbo--selfie {
- margin: 0 auto 25px;
- text-align: center;
- width: 20%;
-}
-
-@media (min-width: 1200px) {
-  .galleryContainer {
-    margin: 0 2%;
-    width: 95%;
-  }
-}
-
-@media (max-width: 414px) {
-  .jumbo--signature, .jumbo--selfie {
-    width: 70%;
-  }
-  #aboutme{
-    top: 0;
-  }
-}
-
-@media (min-width: 415px) and (max-width: 1024px) {
-  .jumbo--signature, .jumbo--selfie {
-    width: 30%;
-  }
-}
-
 .jumbo--text {
-  font-family: 'Open Sans Condensed', sans-serif;
-  /* font-weight: 900; */
-  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-size: 2em;
   font-weight: bold;
@@ -190,6 +94,69 @@
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 414px){
+  .jumbo--signature {
+    width: 70%;
+  }
+  .jumbo--text button {
+    border-color: #cecece;
+    color: #cecece;
+    animation: greyToBlack 4s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    margin-top: 15px;
+    display: block;
+  }
+  .jumbo--text p:last-child {
+    display: none;
+  }
+  #aboutme{
+    top: 0;
+  }
+}
+
+@media (min-width: 415px){
+  .jumbo--signature {
+    width: 30%;
+  }
+  .jumbo--text button {
+    display: none;
+  }
+  .jumbo--text p:last-child {
+    display: inline-block;
+  }
+}
+
+@media(max-width:501px){
+  .jumbo--signature{
+    height: 17vh;
+  }
+  .jumbo--text p{
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .galleryContainer {
+    margin: 0 2%;
+    width: 95%;
+  }
+}
+
+.moveUp {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
+}
+
+/* FOR JENNIFER's NAME */
 @keyframes greyTored {
   from {color: #a2a2a2;}
   to {color: red;}
@@ -200,13 +167,22 @@
   to {color: black;}
 }
 
-@media (min-width: 1px) and (max-width:501px){
-  .jumbo--signature{
-    height: 17vh;
-    /* width: 40%; */
+/* FOR ABOUT ME ON FADE */
+@-webkit-keyframes moveUp {
+  0% {
+    -webkit-transform: translateY(0);
   }
-  .jumbo--text p{
-    display: block;
+  100% {
+    -webkit-transform: translateY(-400px);
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-400px);
   }
 }
 
@@ -290,14 +266,73 @@
 	}
 }
 
+/* ABOUT ME // QUOTE */
+
+.quote {
+  margin-top: 50px;
+}
+
+.quote--text {
+  margin-bottom: 50px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.quote--button {
+  border-color: #cecece;
+  color: black;
+}
+
+@media (min-width: 415px) {
+  .quote--button, .quote--text {
+    width: 50%;
+    margin: 0 auto 50px;
+  }
+}
+
+@media (max-width: 375px){
+  .quote {
+    margin-top: 25px;
+  }
+  .quote--text {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 320px){
+  .quote {
+    margin-top: 0;
+  }
+  .quote--text {
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+}
+
 /* FOOTER */
 
 footer {
   font-size: 17px;
-  padding: 45px 0;
+  padding: 25px 0 45px;
   width: 100%;
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
   margin: 0 auto;
   text-align: center;
+}
+
+.sticky-footer {
+   width:100%;
+   position:fixed;
+   bottom:0px;
+}
+
+.footer--aboutme {
+  bottom: 10px;
+  position: relative;
+  width: 75%;
+}
+
+.footer--content p {
+  margin-bottom: 0;
 }
