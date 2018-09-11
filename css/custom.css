@@ -313,7 +313,7 @@ body {
 
 footer {
   font-size: 17px;
-  padding: 25px 0 45px;
+  padding: 50px 0 60px;
   width: 100%;
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
@@ -335,4 +335,20 @@ footer {
 
 .footer--content p {
   margin-bottom: 0;
+}
+
+.footer--bottom {
+  padding-top: 25px;
+}
+
+@media (min-width: 768px){
+  .footer--aboutme {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1028px){
+  .footer--aboutme {
+    width: 25%;
+  }
 }
